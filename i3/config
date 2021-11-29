@@ -1,0 +1,247 @@
+#[ My config ]#
+
+#====================================================[ Initialize ]#
+
+#do not show titlebar on windows: 
+for_window [class="^.*"] border pixel 1
+
+gaps inner 10
+gaps outer 10
+
+set $mod Mod4
+for_window [urgent=latest] focus
+font xft:FontAwesome 11
+floating_modifier $mod
+
+# thin borders
+hide_edge_borders both
+
+#get auth work with polkit-gnome
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id nm-applet
+exec --no-startup-id exec xbanish -i shift -i control -i mod1 -i mod4	# Hide mouse when typing
+exec --no-startup-id albert
+exec --no-startup-id flameshot
+exec --no-startup-id clipit
+exec --no-startup-id amixer set Capture nocap
+exec --no-startup-id xrandr --output DP1 --off --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+exec --no-startup-id feh --bg-fill --randomize ~/Pictures/wallpaper
+#transparency 
+exec --no-startup-id picom --experimental-backends
+
+#set powersavings for display:
+exec --no-startup-id xset s 480 dpms 600 600 600
+
+#=====[  ]=====#
+
+
+
+#====================================================[ app config ]#
+for_window [class="Shutdown_menu"] floating enable
+
+#=====[  ]=====#
+
+
+
+#====================================================[ Workspaces ]#
+
+floating_modifier $mod
+set $ws1 "1 "
+set $ws2 "2 "
+set $ws3 "3 "
+set $ws4 "4 "
+set $ws5 "5 "
+set $ws6 "6 "
+set $ws7 "7 "
+set $ws8 "8 "
+set $ws9 "9 "
+set $ws10 "10 "
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+	
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# navigate workspaces next/previous
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+#=====[  ]=====#
+
+
+
+#==========================================[ Workspace Assignment ]#
+
+assign [class="minecraft-launcher"] $ws10
+ 
+for_window [class="Pavucontrol"] floating enable sticky enable
+for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="feh"] floating enable sticky enable
+for_window [class="gcolor3"] floating enable
+
+#=====[  ]=====#
+
+
+
+#========================================================[ Resize ]#
+
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+    # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+#resize floating windows with mouse scroll:
+bindsym --whole-window --border $mod+button4 resize shrink height 5 px or 5 ppt
+bindsym --whole-window --border $mod+button5 resize grow height 5 px or 5 ppt
+bindsym --whole-window --border $mod+shift+button4 resize shrink width 5 px or 5 ppt
+bindsym --whole-window --border $mod+shift+button5 resize grow width 5 px or 5 ppt
+
+#=====[  ]=====#
+
+
+
+#========================================================#[ Colors ]#
+
+set $bg-color		          #180b06
+set $inactive-bg-color		#180b06
+set $text-color		        #ff0000
+set $inactive-text-color	#38E0FF
+set $urgent-bg-color		  #1A191D
+#			border			background		text			indicator
+client.focused		$bg-color		$bg-color		$text-color		#ff7676
+client.unfocused	$inactive-bg-color	$inactive-bg-color	$inactive-text-color	#ff7676
+client.focused_inactive	$inactive-bg-color	$inactive-bg-color	$inactive-text-color	#ff7676
+client.urgent		$urgent-bg-color	$urgent-bg-color	#ffffff			#ff7676
+
+#=====[  ]=====#
+
+
+
+#===========================================================#[ Bar ]#
+
+bar {
+	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+	font pango:mono 12
+	position top
+	mode dock
+	modifier None
+	colors {
+		background $bg-color
+	    	separator #fc4444
+		#                  border             background         text
+		focused_workspace  $inactive-bg-color $inactive-bg-color $inactive-text-color
+		inactive_workspace $bg-color 	      $bg-color 	 $text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+}}
+
+#=====[  ]=====#
+
+
+#=================================================#[ Key Bindings ]#
+# xmodmap -pke
+bindsym Ctrl+q 				kill
+bindsym $mod+q 				exec firefox
+bindsym $mod+Shift+q	exec brave
+bindsym $mod+w				exec feh --bg-fill --randomize ~/Pictures/wallpaper
+bindsym $mod+e				exec pcmanfm
+bindsym $mod+r				mode "resize"
+bindsym $mod+Shift+r  restart
+bindsym $mod+t				layout tabbed
+bindsym $mod+y				layout stacking
+bindsym $mod+u				layout toggle split
+# bindsym $mod+i			exec --no-startup-id notify-send " $(wget -qO - icanhazip.com)"
+# bindsym $mod+o			exec
+bindsym $mod+p				focus parent
+bindsym $mod+Shift+p	focus child
+# bindsym $mod+[			exec
+# bindsym $mod+]			exec
+# bindsym $mod+a			exec
+# bindsym $mod+s			exec
+bindsym $mod+d				exec rofi -show run -config ~/.config/rofibar.rasi
+bindsym $mod+Shift+d	exec firejail discord
+bindsym $mod+f				fullscreen toggle
+# bindsym $mod+g			exec
+bindsym $mod+h	 			split h
+# bindsym $mod+j			exec
+# bindsym $mod+k			exec
+# bindsym $mod+l	 		exec
+# bindsym $mod+;			exec
+# bindsym $mod+'			exec 
+# bindsym $mod+\			exec
+# bindsym $mod+z			exec
+bindsym $mod+x				exec .config/i3/scripts/shutdown_menu
+bindsym $mod+c				exec mousepad
+bindsym $mod+Shift+c 		          reload
+bindsym $mod+v				            split v
+bindsym $mod+b				            exec redshift -O 4000K
+bindsym $mod+Shift+B 		          exec redshift -x
+bindsym $mod+n				            exec xrandr --output DP1 --mode 1366x768 --pos 1920x312 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+bindsym $mod+Shift+n		          exec xrandr --output DP1 --off --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+bindsym $mod+Ctrl+n               exec xrandr --output DP1 --mode 1366x768 --pos 0x0 --rotate normal --output HDMI1 --off --output VIRTUAL1 --off
+bindsym $mod+m				            bar mode toggle
+bindsym $mod+comma                exec "amixer set Capture 5%- ; notify-send 'mic -5'"
+bindsym $mod+Shift+comma 	        exec "amixer set Capture nocap; notify-send 'mic mute'"
+bindsym $mod+period			          exec "amixer set Capture 5%+ ; notify-send 'mic +5'"
+bindsym $mod+Shift+period	        exec "amixer set Capture cap; notify-send 'mic unmute'"
+# bindsym $mod+/			            exec i3lock -i ~/.config/i3/i3-lock-screen.png -t -f
+bindsym $mod+Return			          exec xfce4-terminal 
+bindsym $mod+Shift+return	        exec code
+bindsym $mod+Shift+space	        floating toggle
+
+bindsym $mod+Up			        focus up
+bindsym $mod+Shift+Up			  move up
+bindsym $mod+Down		        focus down
+bindsym $mod+Shift+Down			move down
+bindsym $mod+Left		        focus left
+bindsym $mod+Shift+Left			move left
+bindsym $mod+Right		      focus right
+bindsym $mod+Shift+Right		move right
+
+bindsym Print 			        exec flameshot gui
+bindsym Shift+Print 			  #
+bindsym $mod+Print		      #
+bindsym $mod+Scroll_Lock		#
+bindsym $mod+Delete		      #
+bindsym XF86Launch1		    	#
+
+# volume
+bindsym XF86AudioRaiseVolume 		exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks && notify-send 'speaker volume +5'
+bindsym XF86AudioLowerVolume 		exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks && notify-send 'speaker volume -5'
+bindsym $Shift+XF86AudioRaiseVolume 	exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks && notify-send 'speaker volume +1'
+bindsym $Shift+XF86AudioLowerVolume 	exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks && notify-send 'speaker volume -1'
+
+# mute  
+bindsym XF86AudioMute 			exec amixer sset Master toggle && killall -USR1 i3blocks && notify-send 'speaker mute'
+
+bindsym XF86AudioPlay 			exec playerctl play
+bindsym XF86AudioPause 			exec playerctl pause
+bindsym XF86AudioNext 			exec playerctl next
+bindsym XF86AudioPrev 			exec playerctl previous
+
+#=====[  ]=====#
