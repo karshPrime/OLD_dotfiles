@@ -1,0 +1,63 @@
+/* Rofi Application Launcher */
+
+configuration {
+  show-icons: true;
+  // icon-theme: "Paper";
+  size: 20;
+  location: 0; // center
+}
+
+/*back 0, text 15 */
+* {
+  background-color: #131720;
+  text-color: #edfdf0;
+}
+
+window {
+  fullscreen: false;
+  font: "Inconsolata 10";
+  width: 37%;
+  height: 34%;
+  border-radius: 0px;
+}
+
+prompt { enabled: false; }
+
+/* backg 3, color 0 */
+entry {
+  padding: 5px 15 5px 15;
+  horizontal-aligns: 0.5;
+  margin: 3% 12% 0% 12%;
+  color: #0A0503;
+  background-color: #f4507b;
+  font: "Inconsolata 13";
+  border-radius: 50px;
+  placeholder: "Search";
+}
+
+listview {
+  columns: 3;
+  padding: 1.5%;
+  margin: 2% 0% 2% 0%;
+}
+
+element {
+  padding: 1.4%;
+  margin: 1% 0.3% 1% 0.3%;
+  orientation: horizontal;
+}
+
+/* text 0, back 3 */
+element selected {
+  text-color: #0A0000;
+  background-color: #f8b5b0;
+  border-radius: 50px;
+}
+
+element-icon {
+  size: 10;
+}
+
+element-text {
+  horizontal-align: 0.5;
+}
