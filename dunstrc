@@ -1,0 +1,67 @@
+[global]
+title = Dunst
+class = Dunst
+monitor = 0
+follow = mouse
+geometry = "350x5-10+30"
+indicate_hidden = yes
+shrink = yes
+
+transparency = 20
+separator_height = 1
+padding = 6
+horizontal_padding = 7
+frame_width = 6
+frame_color = "#131212"
+separator_color = "#242323"
+
+font = font-awesome 8
+
+line_height = 0
+markup = full
+format = "<span size='x-large' font_desc='Cantarell 9' weight='bold' foreground='#FF2F2F'>%s</span>\n%b"
+alignment = left
+
+idle_threshold = 120
+show_age_threshold = 60
+sort = no
+word_wrap = yes
+ignore_newline = no
+stack_duplicates = false
+hide_duplicate_count = yes
+show_indicators = no
+sticky_history = no
+history_length = 20
+always_run_script = true
+corner_radius = 0
+icon_position = left
+max_icon_size = 80
+
+icon_path = /usr/share/icons/Paper/32x32/actions/:/usr/share/icons/Paper/32x32/apps/:/usr/share/icons/Paper/32x32/categories/:/usr/share/icons/Paper/32x32/devices/:/usr/share/icons/Paper/32x32/emblems/:/usr/share/icons/Paper/32x32/emotes/:/usr/share/icons/Paper/32x32/mimetypes/:/usr/share/icons/Paper/32x32/places/:/usr/share/icons/Paper/32x32/status/:/usr/share/icons/Paper/32x32/web/
+
+browser = firefox
+
+mouse_left_click = close_current
+mouse_middle_click = do_action
+mouse_right_click = close_all
+
+[shortcuts]
+close = ctrl+space
+close_all = ctrl+shift+space
+history = ctrl+Escape
+context = ctrl+shift+period
+
+[urgency_low]
+timeout = 10
+background = "#131212"
+foreground = "#2FDCFF"
+
+[urgency_normal]
+timeout = 15
+background = "#131212"
+foreground = "#2FDCFF"
+
+[urgency_critical]
+timeout = 30
+background = "#131212"
+foreground = "#2FDCFF"
