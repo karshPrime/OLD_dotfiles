@@ -17,7 +17,7 @@ export LANG=en_GB.UTF-8
 alias install='sudo pacman -S'
 alias trash='sudo pacman -Rns'
 alias look='pacman -Ss'
-alias have='pacman -Qs | more'
+alias have='pacman -Qs --color=always | more'
 alias check='pacman -Qq | grep -i'
 alias pls='sudo'
 alias clean='sudo pacman -Sc'
