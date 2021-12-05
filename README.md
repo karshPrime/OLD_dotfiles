@@ -1,4 +1,4 @@
-<h1 align="center">Arch i3wm dotfiles</h1>
+<h1 align="center">Arch Sway wm dotfiles</h1>
 
 ![Ut's dotfiles](https://raw.githubusercontent.com/ut-kr/Dotfiles/main/Screenshots/home.png)
 
