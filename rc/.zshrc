@@ -14,20 +14,24 @@ export LANG=en_GB.UTF-8
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Aliases
-alias install='sudo pacman -S'
-alias trash='sudo pacman -Rns'
-alias look='pacman -Ss'
-alias have='pacman -Qs --color=always | more'
-alias check='pacman -Qq | grep -i'
-alias pls='sudo'
-alias clean='sudo pacman -Sc'
-alias update='sudo pacman -Syyu'
-alias sirc='makepkg -sirc'
-alias nvidia='prime-run'
-alias mem="sudo sh -c 'sync; echo 3 > /proc/sys/vm/drop_caches' && echo 'Cleared RAM'"
-alias bloat='pacman -Qqdt | wc -l && pacman -Qqdt && sudo pacman -Rs $(pacman -Qqtd)'
-alias pkgback='pacman -Qq > ~/Dev/AppList/packages_$(date | cut -c 12-20)'
-alias container='firejail --list'
-alias fonts='fc-list | cut -f2 -d: | sort -u'
+alias clean='yay -Scc'
+alias scan='sudo clamscan -rio /'
+alias batcap="upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep capacity | awk '{print \$2}'"
+alias cell='firejail --list'
+alias update='yay; sudo freshclam'
+
+alias pkgadd='sudo pacman -S'
+alias pkgmake='makepkg -sirc'
+alias pkgrm='sudo pacman -Rns'
+alias pkgsearch='sudo pacman -Ss'
+alias pkglist='pacman -Qs --color=always | less'
+alias pkgcheck='pacman -Qq --color=always | grep -i'
+alias pkgcount='pacman -Qq | wc -l'
+
+alias nv='prime-run'
+alias ss='sudo systemctl'
+alias v='vim'
+alias sv='sudo vim'
+
 alias tedit='vim ~/.zshrc'
 alias tupdate='source ~/.zshrc'
