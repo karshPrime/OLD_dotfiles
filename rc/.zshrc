@@ -13,6 +13,12 @@ export LANG=en_GB.UTF-8
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Functions
+pkgback() {pacman -Qq > ~/Dev/applist/$1 }
+cmd() { man -k $1|sed "s/ - \(.*\)/ - \o033[35m\1\o033[0m/"; }
+cdir() {mkdir $1 && cd $1}
+look() {$2 $3 $4 $5 | grep -i $1 }
+
 # Aliases
 alias clean='yay -Scc'
 alias scan='sudo clamscan -rio /'
