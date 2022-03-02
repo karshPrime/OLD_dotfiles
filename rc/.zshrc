@@ -17,10 +17,6 @@ export LANG=en_GB.UTF-8
 bindkey -s '^[z' 'clear; $HOME/Dev/Scripts/Fetch/header_fetch.sh^M'
 bindkey -s '^[x' '$HOME/Dev/Scripts/Fetch/tinfo.sh^M'
 
-bindkey -s '^[n' 'git commit -m "🍩 Create '
-bindkey -s '^[m' 'git commit -m "🪐 Update '
-bindkey -s '^[k' 'git status^M'
-bindkey -s '^[l' 'git add '
 
 # Functions
 pback() {rpm -qa > $HOME/Dev/applist/$1 }
@@ -29,8 +25,6 @@ cplus() {FILE_NAME=$(basename "$1" .cpp) ;g++ -o $FILE_NAME $1; ./$FILE_NAME}
 cdir() {mkdir $1 && cd $1}
 look() {$2 $3 $4 $5 $6 $7 $8 $9 $10 | grep -i $1 }
 
-grem() { git update-index --assume-unchanged $1 && rm $1 }
-gremu() { git update-index --no-assume-unchanged $1 && git restore $1 }
 
 # Aliases
 alias clean='sudo dnf autoremove'
@@ -59,8 +53,18 @@ alias fonts='fc-list | cut -f2 -d: | sort -u'
 alias freshclam='sudo systemctl stop clamav-daemon.service; systemctl start clamav-daemon.service; sudo freshclam'
 alias black='python -m black'
 alias kssh='kitty +kitten ssh'
-alias greml="git ls-files -v|grep '^h'"
 
 alias tedit='nvim $HOME/.zshrc'
 alias tupdate='source $HOME/.zshrc'
 
+
+# Git 
+bindkey -s '^[n' 'git commit -m "🍩 Create '
+bindkey -s '^[m' 'git commit -m "🪐 Update '
+bindkey -s '^[k' 'git status^M'
+bindkey -s '^[l' 'git add '
+
+alias greml="git ls-files -v|grep '^h'"
+
+grem() { git update-index --assume-unchanged $1 && rm $1 }
+gremu() { git update-index --no-assume-unchanged $1 && git restore $1 }
