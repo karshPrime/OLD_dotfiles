@@ -1,6 +1,6 @@
 <h1 align="center">Arch Sway wm dotfiles</h1>
 
-![Ut's dotfiles](https://raw.githubusercontent.com/ut-kr/Dotfiles/main/Screenshots/home.png)
+![Ut's dotfiles](https://raw.githubusercontent.com/ut-kr/dotfiles/main/screenshots/home.png)
 
 <p align="center">
     <b>Screenshots</b><br>
@@ -16,12 +16,12 @@
 
 **For the Shell:**
 
-| Package                                                                       | Description                                                      |
-|-------------------------------------------------------------------------------|------------------------------------------------------------------|
-| [Zsh](https://github.com/zsh-users/zsh)                                       | The most powerful shell out there!                               |
-| [XTerm](https://invisible-island.net/xterm/)                                  | Pretty basic terminal emulator                                   |
-| [tty-clock](https://github.com/xorg62/tty-clock)                              | Terminal clock                                      \**optional* |
-| [*custom script*](https://github.com/ut-kr/Tools/tree/main/System%20Info)     | Terminal flash screen with everytime a new icon                  |
+| Package                                                 | Description                                                      |
+|---------------------------------------------------------|------------------------------------------------------------------|
+| [Zsh](https://github.com/zsh-users/zsh)                 | The most powerful shell out there!                               |
+| [XTerm](https://invisible-island.net/xterm/)            | Pretty basic terminal emulator                                   |
+| [tty-clock](https://github.com/xorg62/tty-clock)        | Terminal clock                                      \**optional* |
+| [*custom script*](https://github.com/ut-kr/fetch)       | Terminal flash screen with everytime a new icon                  |
 
 ------
 
@@ -43,7 +43,7 @@
 <br><br>
 <p align="center">
     <b>Also Check<b><br>
-    <a href="https://github.com/ut-kr/Dotfiles/blob/main/tools.md">Recommended-Tools</b>&nbsp;&nbsp;&nbsp;
-    <a href="https://github.com/ut-kr/Dotfiles/blob/main/Shortcuts.md">Useful-Shortcuts</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://github.com/ut-kr/Tools">Custom-Tools</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/ut-kr/dotfiles/blob/main/tools.md">Recommended-Tools</b>&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/ut-kr/dotfiles/blob/main/Shortcuts.md">Useful-Shortcuts</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/ut-kr?tab=repositories">Other Projects</a>&nbsp;&nbsp;&nbsp;
 </p>
