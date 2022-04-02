@@ -4,12 +4,11 @@
 
 <p align="center">
     <b>Screenshots</b><br>
-    <a href="https://raw.githubusercontent.com/ut-kr/Tools/main/System%20Info/terminal.png">terminal</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://raw.githubusercontent.com/ut-kr/Tools/main/Shutdown%20Menu/screenshot.png">power-menu</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://raw.githubusercontent.com/ut-kr/Dotfiles/main/Screenshots/dunst.png">dunst</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://raw.githubusercontent.com/ut-kr/Dotfiles/main/Screenshots/rofi.png">rofi</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://raw.githubusercontent.com/ut-kr/Dotfiles/main/Screenshots/firefox.png">firefox</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://raw.githubusercontent.com/ut-kr/Dotfiles/main/Screenshots/firefox.png">firefox</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://raw.githubusercontent.com/ut-kr/fetch/main/screenshots/art.png">terminal</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/ut-kr/shutdown_menu/blob/main/screenshot.png">power-menu</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://raw.githubusercontent.com/ut-kr/dotfiles/main/Screenshots/dunst.png">dunst</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://raw.githubusercontent.com/ut-kr/dotfiles/main/Screenshots/rofi.png">rofi</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://raw.githubusercontent.com/ut-kr/dotfiles/main/Screenshots/firefox.png">firefox</a>&nbsp;&nbsp;&nbsp;
 </p>
 
 ## Essential stuff used in this config
