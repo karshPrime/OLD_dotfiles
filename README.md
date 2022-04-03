@@ -1,14 +1,14 @@
 <h1 align="center">Arch Sway wm dotfiles</h1>
 
-![Ut's dotfiles](https://raw.githubusercontent.com/ut-kr/dotfiles/main/screenshots/home.png)
+![system overview](https://raw.githubusercontent.com/ut-kr/dotfiles/main/screenshots/home.png)
 
 <p align="center">
     <b>Screenshots</b><br>
     <a href="https://raw.githubusercontent.com/ut-kr/fetch/main/screenshots/art.png">terminal</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://github.com/ut-kr/shutdown_menu/blob/main/screenshot.png">power-menu</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://raw.githubusercontent.com/ut-kr/dotfiles/main/Screenshots/dunst.png">dunst</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://raw.githubusercontent.com/ut-kr/dotfiles/main/Screenshots/rofi.png">rofi</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://raw.githubusercontent.com/ut-kr/dotfiles/main/Screenshots/firefox.png">firefox</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://raw.githubusercontent.com/ut-kr/shutdown_menu/main/screenshot.png">power-menu</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://raw.githubusercontent.com/ut-kr/dotfiles/main/screenshots/dunst.png">dunst</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://raw.githubusercontent.com/ut-kr/dotfiles/main/screenshots/rofi.png">rofi</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://raw.githubusercontent.com/ut-kr/dotfiles/main/screenshots/firefox.png">firefox</a>&nbsp;&nbsp;&nbsp;
 </p>
 
 ## Essential stuff used in this config
