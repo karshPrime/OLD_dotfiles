@@ -1,4 +1,5 @@
 <h1 align="center">Arch Sway wm dotfiles</h1>
+*not maintained anymore
 
 ![system overview](https://raw.githubusercontent.com/ut-kr/dotfiles/main/screenshots/home.png)
 
